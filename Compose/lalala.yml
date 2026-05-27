@@ -1,0 +1,16 @@
+services:
+
+  api:
+  
+    build:
+    dockerfile:
+    context: ./
+  environment:
+    name=value
+  ports:
+    - 1234:5123
+  volumes:
+    - banco:/dados
+
+volumes:
+  banco:
