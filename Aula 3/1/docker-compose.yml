@@ -2,23 +2,29 @@
 services:
   
   maestro:
-    image: ngnix:latest
+    image: nginx:latest
     ports:
       - 1234:80
     volumes:
        - ./nginx.conf:/etc/nginx/nginx.conf:ro
 
-  worker0X:
+  worker0:
     image: hashicorp/http-echo
     command: "-text='Sla Piá'"
 
-  worker1X:
+  worker1:
     image: hashicorp/http-echo
     command: "-text='OPa bão!'"
 
-  worker2X:
+  worker2:
     image: hashicorp/http-echo
     command: "-text='LalaLa'"
 
+    # plankton:
+    #   image: crcardd/plankton:latest
+    #   volumes:
+    #   - /var/run/docker.sock:/var/run/docker.sock
+    #   ports: 
+    #     - 5555:5032
 
 
