@@ -1,0 +1,43 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+
+WORKDIR /app
+
+ENV HTTP_PROXY: http://host.docker.internal:3128
+ENV HTTPS_PROXY: http://host.docker.internal:3128
+
+COPY ./banana/Code/Backend/*.sln ./
+
+COPY ./banana/Code/Backend/Iduca.Api/*.csproj ./Iduca.Api/
+COPY ./banana/Code/Backend/Iduca.Domain/*.csproj ./Iduca.Domain/
+COPY ./banana/Code/Backend/Iduca.Application/*.csproj ./Iduca.Application/
+COPY ./banana/Code/Backend/Iduca.Persistence/*.csproj ./Iduca.Persistence/
+
+RUN dotnet restore
+
+
+# COPY ./Code/Backend/Iduca.Api ./Iduca.Api
+# COPY ./Code/Backend/Iduca.Domain ./Iduca.Domain
+# COPY ./Code/Backend/Iduca.Application ./Iduca.Application
+# COPY ./Code/Backend/Iduca.Persistence ./Iduca.Persistence
+
+# # RUN dotnet publish -c Release -o /app/publish
+
+# CMD ["dotnet", "run", "--urls=http://0.0.0.0:8080"]
+
+# Second Layer
+# FROM mcr.microsoft.com/dotnet/aspnet:9.0
+
+# # RootLess
+# RUN addgroup -S testers
+# RUN adduser -S beta_cristian -G testers>
+# #
+
+# WORKDIR /app
+
+
+# COPY --from=build /app/publish .
+# USER beta_cristian
+
+# ENTRYPOINT ["dotnet", "../Code/Backend.dll"]
+
+EXPOSE 5284

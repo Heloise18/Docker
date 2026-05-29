@@ -1,0 +1,44 @@
+services:
+
+  Front:
+    image: node-iduca
+
+    build: 
+      context: .
+      dockerfile: Front
+
+    environment:
+      - NEXT_PUBLIC_API_HOST (host da api que será usada)
+      - NEXT_PUBLIC_API_PORT=3000
+      - NEXT_PUBLIC_API_ENP (endpoint da api que será usada, ex '/v1')
+    depends_on:
+      - DB
+      - API
+
+
+  DB:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=iduca_db                                                                                           
+      - MYSQL_USER=banana
+      - MYSQL_PASSWORD=1234
+
+
+
+  API:
+    image: dotnet-iduca
+
+    build: 
+      context: .
+      dockerfile: Front
+
+    environment:
+      - DB_HOST=
+      - DB_PORT=5284
+      - DB_NAME=
+      - DB_USER=banana
+      - DB_PASS=1234
+
+    depends_on:
+      - DB
