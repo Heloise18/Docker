@@ -1,0 +1,26 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0-alpine AS build
+
+WORKDIR /app
+
+
+ENV HTTP_PROXY="host.docker.internal:3128"
+ENV HTTPS_PROXY="host.docker.internal:3128"
+
+
+COPY ./Client/*csproj ./
+
+RUN dotnet restore 
+
+COPY ./Client ./
+
+RUN dotnet publish -c Release -o /app/publish
+
+
+
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-alpine 
+
+WORKDIR /app
+
+COPY --from=build /app/publish .
+
+ENTRYPOINT [ "dotnet","Client.dll" ]

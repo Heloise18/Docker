@@ -1,0 +1,22 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0-alpine AS build
+
+WORKDIR /app
+
+COPY ./Client/*.csproj ./
+
+RUN dotnet restore
+
+COPY ./Client ./
+
+RUN dotnet publish -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-alpine
+
+RUN addgroup -S grupo && adduser -S Fernanda -G grupo
+
+WORKDIR /app
+
+COPY --from=build --chown=Fernanda:grupo /app/publish ./
+
+USER Fernanda
+ENTRYPOINT [ "dotnet","Client.dll" ]
