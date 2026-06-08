@@ -1,0 +1,35 @@
+services:
+  api:
+    build: 
+      context: .
+      dockerfile: Backend
+    ports:
+      - 8000:5284
+    environment:
+      - DB_HOST=database
+      - DB_PORT=3306
+      - DB_NAME=iduca
+      - DB_USER=iduca_admin
+      - DB_PASS=09281__*77
+  
+  database:
+    image: mysql:latest
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=iduca
+      - MYSQL_USER=iduca_admin
+      - MYSQL_PASSWORD=09281__*77
+
+  ui:
+    ports:
+      - 2000:3000
+    
+    image: iduca-ui
+    build: 
+      context: .
+      dockerfile: Frontend
+    environment:
+    - NEXT_PUBLIC_API_HOST=localhost
+    - NEXT_PUBLIC_API_PORT=8000
+    - NEXT_PUBLIC_API_ENP=api

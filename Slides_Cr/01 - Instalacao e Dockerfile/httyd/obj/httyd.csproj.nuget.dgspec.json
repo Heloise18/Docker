@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\4 - Aprendizes\\2 - Desenvolvimento de Sistemas\\6 - Soluções Digitais 2025\\1 - Arquivos Compartilhados\\14. Docker\\00 - Dockerfile\\httyd\\httyd.csproj": {}
+  },
+  "projects": {
+    "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\4 - Aprendizes\\2 - Desenvolvimento de Sistemas\\6 - Soluções Digitais 2025\\1 - Arquivos Compartilhados\\14. Docker\\00 - Dockerfile\\httyd\\httyd.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\4 - Aprendizes\\2 - Desenvolvimento de Sistemas\\6 - Soluções Digitais 2025\\1 - Arquivos Compartilhados\\14. Docker\\00 - Dockerfile\\httyd\\httyd.csproj",
+        "projectName": "httyd",
+        "projectPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\4 - Aprendizes\\2 - Desenvolvimento de Sistemas\\6 - Soluções Digitais 2025\\1 - Arquivos Compartilhados\\14. Docker\\00 - Dockerfile\\httyd\\httyd.csproj",
+        "packagesPath": "C:\\Users\\cca1ct\\.nuget\\packages\\",
+        "outputPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\4 - Aprendizes\\2 - Desenvolvimento de Sistemas\\6 - Soluções Digitais 2025\\1 - Arquivos Compartilhados\\14. Docker\\00 - Dockerfile\\httyd\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cca1ct\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

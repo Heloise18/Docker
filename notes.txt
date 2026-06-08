@@ -1,0 +1,15 @@
+docker build -f Backend -t imagemlegal:latest .
+ 
+docker compose up -d
+ 
+docker compose up --build
+
+docker compose up -d --build
+
+docker compose ps -> visualizar containers
+ 
+docker composse down -> derruba todo o compose permanentemente, encerrando todos os containers
+se passar -v até os volumes são encerrados
+ 
+docker compose logs 
+

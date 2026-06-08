@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      dockerfile: Backend
+      context: ./
+    environment:
+      - name=value
+    ports:
+      - 9090:1212
+
+    volumes:
+      - bancodedados:/mysql/bin/src
+
+
+volumes:
+  bancodedados:

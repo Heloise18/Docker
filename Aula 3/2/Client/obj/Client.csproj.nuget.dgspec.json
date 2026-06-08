@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj": {}
+    "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj": {
+    "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\Docker\\Aula 3\\2\\Client\\obj\\",
+        "projectPath": "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 3\\2\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\zeh1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 3\\2\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zeh1ct\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net9.0": {
+            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {}
           }
@@ -38,10 +39,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net9.0": {
+          "framework": "net9.0",
           "targetAlias": "net9.0",
           "imports": [
             "net461",
@@ -54,12 +56,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.16, 9.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[9.0.16, 9.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.16, 9.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.16, 9.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.117/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

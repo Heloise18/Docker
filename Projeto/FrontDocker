@@ -6,7 +6,6 @@ COPY ./banana/Code/Frontend/ ./
 
 RUN npm install
 
-# RUN addgroup -S lalala && adduser -S Cristian -G lalala
 
 WORKDIR /Projetoo
 

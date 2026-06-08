@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+
+WORKDIR /app
+
+ENV HTTP_PROXY="host.docker.internal:3128"
+ENV HTTPS_PROXY="host.docker.internal:3128"
+
+
+COPY ./Code/Backend/*.sln ./
+
+COPY ./Code/Backend/Iduca.Api/*.csproj ./Iduca.Api/
+COPY ./Code/Backend/Iduca.Application/*.csproj ./Iduca.Application/
+COPY ./Code/Backend/Iduca.Domain/*.csproj ./Iduca.Domain/
+COPY ./Code/Backend/Iduca.Persistence/*.csproj ./Iduca.Persistence/
+
+RUN dotnet restore
+
+COPY ./Code/Backend ./
+
+ENTRYPOINT [ "dotnet" ]
+CMD ["dotnet", "run", "--urls=http://0.0.0.0:5284", "--project", "./Iduca.Api"]
+
+EXPOSE 5284

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\Docker\\Aula 1\\API\\API.csproj": {}
+    "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 1\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\Docker\\Aula 1\\API\\API.csproj": {
+    "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 1\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Docker\\Aula 1\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 1\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\Docker\\Aula 1\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\Docker\\Aula 1\\API\\obj\\",
+        "projectPath": "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 1\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\zeh1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zeh1ct\\Desktop\\Docker\\Aula 1\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zeh1ct\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -38,10 +39,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
@@ -72,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.117/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
