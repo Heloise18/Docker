@@ -1,0 +1,68 @@
+services:
+
+  maestro:
+    image: nginx:latest
+    ports:
+      - 1234:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+  worker1:
+    image:  iagro_api
+  
+
+  api:
+    image: iagro_api
+
+    networks: 
+      - rede
+    # build: 
+    #   context: .
+    #   dockerfile: Backend
+    ports:
+      - 8000:5215 
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=IAgro
+      - DB_USER=adm_IAgro
+      - DB_PASS=040408_*290407
+
+  db:
+    networks: 
+        - rede
+
+    image: postgis/postgis:16-3.4
+
+    environment:
+      - POSTGRES_USER=adm_IAgro
+      - POSTGRES_PASSWORD=040408_*290407
+      - POSTGRES_DB=IAgro
+    volumes:
+      - banco:/var/lib/postgresql/data
+  
+  ui:
+    networks: 
+        - rede
+    ports:
+      - 2000:5173 
+
+    image: iagro_ui
+
+    # build: 
+      # context: .
+      # dockerfile: Frontend
+    environment:
+      - VITE_API_PORT=8000
+      - VITE_API_HOST=localhost
+      - VITE_API_ENDPOINT=/api
+
+networks:
+  rede: 
+
+volumes:
+  banco:
+
+
+
+
